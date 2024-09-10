@@ -13,6 +13,7 @@ Titanic.full <- rbind(Titanic.train,Titanic.test)
 #Cleaning the data , Handling the missing values
 Titanic.full[Titanic.full$Embarked=="","Embarked"] <- "U"
 
+which(is.na(Titanic.full$Age))
 Age.median <- median(Titanic.full$Age,na.rm = T)
 Titanic.full[is.na(Titanic.full$Age),"Age"] <- Age.median
 
