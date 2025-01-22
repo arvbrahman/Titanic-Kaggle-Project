@@ -24,7 +24,7 @@ Titanic.full[is.na(Titanic.full$Fare),"Fare"] <- Fare.median
 Titanic.full$Pclass<- as.factor(Titanic.full$Pclass)
 Titanic.full$Sex<- as.factor(Titanic.full$Sex)
 Titanic.full$Embarked<- as.factor(Titanic.full$Embarked)
-
+ 
 #Splitting the data back into train and test 
 Titanic.train <- Titanic.full[Titanic.full$isTrain==T,]
 Titanic.test <- Titanic.full[Titanic.full$isTrain==F,]
